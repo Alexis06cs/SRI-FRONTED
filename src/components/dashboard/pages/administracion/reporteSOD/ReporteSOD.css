@@ -1,0 +1,9 @@
+.adm_container {
+    padding: 20px;
+}
+
+.adm_container_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas con igual ancho */
+    gap: 20px; /* Espacio entre las tarjetas */
+}

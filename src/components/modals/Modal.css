@@ -1,0 +1,37 @@
+.modal-overlay {
+    position: fixed; /* Fijo para que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Asegura que ocupe todo el ancho */
+    height: 100vh; /* Asegura que ocupe toda la altura */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    z-index: 9999; /* Asegura que esté encima de todo */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    z-index: 10000; /* Asegura que esté encima del fondo */
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

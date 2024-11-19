@@ -1,0 +1,96 @@
+.oc_container {
+    padding: 10px;
+}
+
+.oc_container_card {
+    margin: 40px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.oc_container_filters {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px; /* Espacio entre los elementos */
+    margin-bottom: 40px;
+}
+
+.oc_container_filters label {
+    margin-right: 5px;
+}
+
+.oc_container_filters select {
+    padding: 5px;
+    width: 150px;
+}
+
+.oc_container_filtersbtn_histrograma {
+    padding: 8px 16px;
+    border: none;
+    background-color: #0ABD8C;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.titulo {
+margin: 18px;
+}
+
+.oc_container_filters button:hover {
+    background-color: #0ABD8C;
+}
+
+.btn_histrograma, .btn_histrograma {
+    margin-left: auto; /* Empuja estos botones hacia el extremo derecho */
+}
+
+.btn_buscar, .btn_histrograma, .btn_exportar_excel {
+    background-color: #0ABD8C;
+    padding: 8px 25px;
+    font-size: 15px; /* Disminuye el tamaño de la fuente */
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+.oc_container_table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 5px; /* Reduce el padding para que las filas sean más delgadas */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #0ABD8C;
+    color: white;
+    font-size: 14px; /* Puedes ajustar el tamaño de fuente si lo necesitas */
+}
+
+table td {
+    font-size: 14px; /* Ajusta el tamaño de fuente si es necesario */
+}
+
+table td button {
+    padding: 5px 10px; /* Reduce el padding del botón */
+    border: none;
+    background-color: #0ABD8C;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table td button:hover {
+    background-color: #0d7056;
+}

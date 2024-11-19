@@ -1,0 +1,171 @@
+/* Contenedor principal */
+.cdd_container {
+    position: relative;
+    top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+/* Título principal */
+.cdd_container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+
+.carga-datos-container2 {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Formulario de carga */
+.carga-datos-forms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 200px; 
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background: #FFF;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    width: 1050px;
+    height: 115px;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.user {
+    text-align: justify;
+    margin: 30px;
+    font-size: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botones de formulario */
+.form-group.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    grid-column: 4;
+}
+
+.btn-cancelar, .btn-guardar {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.btn-cancelar {
+    background-color: #EBEFF4;
+    color: #000;
+    border: none;
+}
+
+.btn-guardar {
+    background-color: #0ABD8C;
+    color: white;
+    border: none;
+}
+
+.btn-cancelar:hover {
+    background-color: #c1c6cb;
+}
+
+.btn-guardar:hover {
+    background-color: #0abd7c;
+}
+
+.cd_table {
+    padding: 0px;
+}
+/* Tabla de cargas realizadas */
+.cargas-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cargas-table th, .cargas-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Encabezado de la tabla */
+.cargas-table th {
+    background-color: #0ABD8C;
+    color: white;
+    font-weight: bold;
+}
+
+/* Filas de la tabla */
+.cargas-table td {
+    color: #555;
+}
+
+/* Alineación de iconos en Acciones */
+.acciones-iconos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Iconos de acciones */
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.btn-icon i {
+    color: #4C7AF9;
+}
+
+.btn-icon:hover i {
+    color: #245cf4 ;
+}
+
+.btn-icon .fa-trash {
+    color: #d37676;
+}
+
+.btn-icon:hover .fa-trash {
+    color: #c82333;
+}

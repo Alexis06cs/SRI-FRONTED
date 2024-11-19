@@ -1,0 +1,69 @@
+/* Contenedor principal */
+.mr_container {
+    position: relative;
+    top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+  }
+  
+  /* Título principal */
+  .mr_container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de la tabla */
+  .mr_table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .mr_table th,
+  .mr_table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .mr_table th {
+    background-color: #0ABD8C;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Botones de acciones */
+  .btn-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .btn-icon i {
+    color: #0ABD8C;
+  }
+  
+  .btn-icon:hover i {
+    color: #ffffff !important;
+  }
+  
+  .btn-icon .fa-trash {
+    color: #F86C6B !important;
+  }
+  
+  .btn-icon:hover .fa-trash {
+    color: #ffffff !important;
+  }
+ 

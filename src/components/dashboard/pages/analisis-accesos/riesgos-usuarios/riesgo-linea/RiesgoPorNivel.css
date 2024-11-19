@@ -1,0 +1,163 @@
+.riesgo-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.riesgo-container-card-2{
+    padding: 0px;
+
+}
+
+.input-group {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: flex-start; /* Mantiene los elementos alineados al inicio */
+    
+}
+
+.input-group input, .input-group label, .input-group .buscar-btn, .input-group .export-btn {
+    height: 40px; /* Asegura que todos los elementos tengan la misma altura */
+    display: flex;
+    align-items: center; /* Asegura que el contenido de los botones y el input esté centrado verticalmente */
+
+}
+
+.input-group label {
+    margin-right: 10px; /* Espacio entre la etiqueta y el input */
+}
+
+.buscar-btn {
+    padding: 10px 15px;
+    background-color: #0ABD8C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: -9px
+}
+
+.buscar-btn:hover {
+    background-color: #0ABD8C;
+}
+
+.export-btn {
+    margin-left: 90px;
+    margin-bottom: 27px; /* Esto empuja el botón de exportar hacia la derecha */
+    padding: 1px;
+    background-color: #0ABD8C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.export-btn:hover {
+    background-color: #0ABD8C;
+}
+
+.chart-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.doughnut-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Aumenta el tamaño máximo del gráfico */
+    margin: 0 auto;
+    height: 280px; /* Define la altura para darle más espacio vertical */
+}
+
+
+.table-container2 {
+    margin: 90px;
+}
+
+.table-container2 h2 {
+    text-align: left;
+    margin: 50px 0px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.table-container2 table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-container2 th, .table-container2 td {
+    padding: 12px;
+    border: 1px solid #0ABD8C;
+}
+
+.table-container2 th {
+    background-color: #0ABD8C !important;
+    color: white !important;
+}
+
+.detalles-btn {
+    background-color: #0ABD8C;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+.detalles-btn:hover {
+    background-color: #0ABD8C;
+}
+
+.export-btn {
+    margin-top: 20px;
+    background-color: #0ABD8C;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.rpn_button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0ABD8C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente el texto */
+    align-items: center;     /* Alinea verticalmente el texto */
+    text-align: center;      /* Asegura que el texto esté centrado en el botón */
+}
+
+.rpn_button:hover {
+    background-color: #0ABD8C;
+}

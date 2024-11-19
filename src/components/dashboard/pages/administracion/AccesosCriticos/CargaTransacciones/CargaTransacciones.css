@@ -1,0 +1,144 @@
+/* Contenedor principal */
+.cdd_container {
+    padding: 20px;
+}
+
+/* Título principal */
+.h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.carga-datos-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1100px; /* Ajustar el tamaño máximo si es necesario */
+    margin: 0 auto;
+}
+
+/* Formulario de carga */
+.carga-datos-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 200px; /* Tres columnas para inputs y una para botones */
+    gap: 20px;
+    align-items: center; /* Alinear los elementos verticalmente */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%; /* Ajusta al ancho total del contenedor */
+    box-sizing: border-box;
+}
+
+/* Botones de formulario en una sola línea */
+.form-group.buttons {
+    display: flex;
+    justify-content: flex-start; /* Cambiar a flex-start para que los botones se alineen al principio de la columna */
+    gap: 10px;
+    grid-column: 4; /* Ocupa la cuarta columna de la cuadrícula */
+    flex-direction: row-reverse;
+}
+
+.btn-cancelar, .btn-guardar {
+    padding: 8px 15px; /* Mejoramos el padding para que los botones tengan una altura uniforme */
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.btn-cancelar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-guardar {
+    background-color: #0ABD8C;
+    color: white;
+    border: none;
+}
+
+.btn-cancelar:hover {
+    background-color: #c82333;
+}
+
+.btn-guardar:hover {
+    background-color: #0ABD8C;
+}
+
+/* Tabla de cargas realizadas */
+.cargas-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cargas-table th,
+.cargas-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Encabezado de la tabla */
+.cargas-table th {
+    background-color: #0ABD8C;
+    color: white;
+    font-weight: bold;
+}
+
+/* Celdas de la tabla */
+.cargas-table td {
+    color: #555;
+}
+
+/* Botones de acciones */
+.btn-descargar, .btn-eliminar {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-descargar {
+    background-color: #0ABD8C;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-descargar:hover {
+    background-color: #0ABD8C
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}

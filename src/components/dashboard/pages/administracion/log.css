@@ -1,0 +1,41 @@
+.log_container {
+  position: relative;
+  top: 30px;
+  padding: 40px 20px 20px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  max-width: 970px;
+  margin: 0px 60px 0px 40px;
+}
+
+
+.log_container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.log_table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.log_table th,
+.log_table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.log_table th {
+  background-color: #0ABD8C;
+  color: white;
+  font-weight: bold;
+}

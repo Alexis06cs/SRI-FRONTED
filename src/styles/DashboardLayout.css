@@ -1,0 +1,69 @@
+/* Ajustes para el Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: fixed; /* Hace que el navbar esté fijo 
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que el navbar ocupe toda la anchura 
+  z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos 
+  height: 70px; /* Ajusta la altura del navbar 
+}
+
+/* Ajustes del contenedor principal para que no se solape con el navbar 
+.main-content {
+  margin-top: 80px; /* Deja espacio para el navbar 
+  margin-left: 250px; /* Deja espacio para el sidebar 
+  padding: 20px;
+  margin: 0;
+}
+
+/* Logo del navbar 
+.navbar .logo img {
+  margin-top: 20px;
+  height: 50px;
+  margin-left: 70px; /* Asegura que el logo esté ligeramente separado del borde izquierdo
+}
+
+/* Barra de búsqueda centrada 
+.navbar .search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .search-bar input {
+  width: 40%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 120px;
+}
+
+/* Información del usuario 
+.navbar .user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 40px; /* Ajusta el margen derecho para acercar la imagen de perfil 
+}
+
+.navbar .user-info img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 5px; /* Ajuste menor entre el nombre del usuario y la imagen 
+}
+*/
+
+/******************* MAIN *******************/
+.main{
+  width: calc(100% - var(--aside__width));
+  margin-left: auto;
+  margin-top: var(--header__height);
+  min-height: calc(100dvh - var(--header__height));
+  background-color: #F8F7F7;
+}

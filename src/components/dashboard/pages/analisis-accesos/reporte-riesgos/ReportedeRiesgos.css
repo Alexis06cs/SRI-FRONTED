@@ -1,0 +1,206 @@
+.Card_principal {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .buscador_usuario{
+    display: flex;
+    gap: 35px;
+  }
+  .buscador_usuario span {
+    padding-top: 15px;
+  }
+  .buscador_usuario input {
+    width: 270px;
+  }
+  .btn_b_rriesgos{
+    background-color: #0ABD8C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0px 30px;
+    margin: 10px 0px;
+
+  }
+  .filtros_Rriesgos2{
+    margin: 10px 150px 20px 0px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .filtros_Rriesgos2 span {
+    padding-top: 16px;
+  }
+  .filtros_Rriesgos2 input {
+    width: 250px;
+  }
+  .btn_ap_filtros {
+    background-color: #0ABD8C;
+    color: white;
+    margin: 5px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .btn_export_excel{
+    background-color: #0ABD8C;
+    color: white;
+    margin: 5px 0px 10px 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 30px;
+  }
+  .log_container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .table_wrapper {
+    overflow-x: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border-left-color: #0ABD8C; /* Cambiado el color del borde izquierdo */
+    animation: spin 1s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+  
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .log_table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .log_table th, .log_table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .log_table th {
+    background-color: #0ABD8C;
+    font-weight: bold;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  .pagination button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #0ABD8C;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .pagination button:hover{
+    background-color: #058664;
+  }
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    font-size: 14px;
+    color: #333;
+  }
+  
+/*  Modal Content */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  background-color: #0ABD8C;
+  color: #fff;
+}
+
+.modal-content button {
+  margin-top: 20px;
+}
+
+.btn_modals {
+  background-color: #99a19f;
+  color: white;
+  margin: 5px 50px 10px 0px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 30px;
+  gap: 10px;
+}
+
+.btn_modals2 {
+  background-color: #0ABD8C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 30px;
+  gap: 10px;
+}
+
+.text {
+  justify-content: left;
+  margin: 10px 10px 5px 0px;
+}
+
+.texth2 {
+  font-size: 25px;
+}
+.empty-row {
+  height: 1496px; /* Altura similar a las filas con datos */
+  background-color: #f8f9fa; /* Color claro para diferenciar */
+}

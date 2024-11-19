@@ -1,0 +1,67 @@
+
+  
+  .tabla_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .tabla_header h3 {
+    margin: 0;
+    font-weight: bold;
+    color: black;
+    margin-left: 60px;
+  }
+  
+  .export_excel {
+    background-color: #57c29d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 60px;
+  }
+  
+  .export_excel:hover {
+    background-color: #4d9c80;
+
+  }
+  .tabla_contenedor{
+    margin: 60px;
+  }
+  .details_table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .details_table th, .details_table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .details_table th {
+    background-color: #57c29d;
+    color: white;
+  }
+  
+  .details_table tfoot td {
+    font-weight: bold;
+  }
+  
+  .details_button {
+    background-color: #57c29d;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .details_button:hover {
+    background-color: #45a049;
+  }
+  

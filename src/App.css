@@ -1,0 +1,97 @@
+/* Estructura del sidebar
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Logo centrado 
+  .logo img {
+    display: block;
+    margin: 0 auto 20px;
+    height: 70px;
+  }
+  
+  /* Menú principal
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Elementos del menú principal
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  /* Estilos del navbar
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+  }
+  
+  .navbar .search-bar {
+    width: 300px;
+  }
+  
+  /* Main content - espacio para el sidebar y el navbar
+  /* Ajustes para evitar scroll en la página principal
+
+
+  
+  /* Botón de logout 
+  .logout {
+    background-color: #0ABD8C;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: auto;
+  }
+  
+  .logout a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logout:hover {
+    background-color: #333;
+  }
+  */
+
+/***************** UTILITIES *****************/
+.container{
+  width: 95%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.flex-c-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***************** DASHBOARD LAYOUT *****************/
+#root{
+  width: 100%;
+}

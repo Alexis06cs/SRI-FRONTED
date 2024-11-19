@@ -1,0 +1,67 @@
+.mr_container2 {
+    position: relative;
+    top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px;
+}
+
+.fue {
+    background-color: #0ABD8C;
+    color: white;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    justify-Content: center;
+    align-Items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 20px;
+  }
+
+.licencia-usuarios-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #0ABD8C;
+    color: white;
+}
+
+table td {
+    background-color: #fff;
+}
+
+/* Para hacer la tabla 'Vista Detallada' más grande */
+.vista-detallada {
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+}
+
+.vista-general th, .vista-detallada th {
+    text-align: center;
+}
