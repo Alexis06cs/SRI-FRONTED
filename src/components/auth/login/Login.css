@@ -226,6 +226,7 @@ input:hover {
     display: flex;
     flex-direction: column-reverse;
     padding: 15px;
+    position: fixed;
 
 }
 .container1, .container2 {

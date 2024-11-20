@@ -1,5 +1,6 @@
 import React from 'react';
-import './Olvidaste.css';  // Asegúrate de que el archivo CSS esté correctamente importado
+import { Link } from 'react-router-dom'; // Importar Link de React Router
+import './Olvidaste.css'; // Asegúrate de que el archivo CSS esté correctamente importado
 
 const Olvidaste = () => {
   return (
@@ -16,9 +17,9 @@ const Olvidaste = () => {
         <form>
           <label htmlFor="email">Email</label>
           <input type="email" id="email" name="email" placeholder="cpsoluciones" />
-          <button type="submit">
+          <Link to="/recuperar" className="btn-link">
             Recuperar contraseña
-          </button>
+          </Link>
         </form>
       </div>
     </div>
