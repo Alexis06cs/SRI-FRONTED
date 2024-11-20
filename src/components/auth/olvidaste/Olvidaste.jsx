@@ -3,7 +3,7 @@ import './Olvidaste.css';  // Asegúrate de que el archivo CSS esté correctamen
 
 const Olvidaste = () => {
   return (
-    <div className="container">
+    <div className="container2">
       <div className="image-section">
         <img src="/imagenes/seguridad_sri.jpg" alt="Model Image" />
       </div>

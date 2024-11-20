@@ -83,7 +83,7 @@ const Login = () => {
                 onChange={(e) => setRemember(e.target.checked)}
               /> Recuérdame
             </label>
-            <a href="olvidaste2">Olvidaste tu contraseña</a>
+            <a href="olvidaste">Olvidaste tu contraseña</a>
           </div>
           
           <button className='btn_login' type="submit">
