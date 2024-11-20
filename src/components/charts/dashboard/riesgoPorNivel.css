@@ -41,4 +41,22 @@
     cursor: pointer;
     border-radius: 4px;
   }
+
+  @media screen and ( min-width: 20px) {
+
+  }
+  
+  @media only screen and (max-width: 480px) {
+  .react-chartjs-2{
+      display: block;
+      flex-direction: column-reverse;
+      padding: 12px;
+      font-size: 15px;
+      width: 3570px;
+      float: none;
+      position: fixed;
+  }
+  
+  
+  }
   
