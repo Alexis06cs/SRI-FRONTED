@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate de React Router
-import { useAuth } from './AuthContext'; // Importar el contexto de autenticación
-import './Login.css'; // Importar el archivo CSS
-import usuarios from './usuarios'; // Importar la lista de usuarios "en duro"
-
+import { useNavigate } from 'react-router-dom'; 
+import { useAuth } from './AuthContext'; 
+import { Link } from 'react-router-dom'; 
+import './Login.css'; 
+import usuarios from './usuarios'; 
 const Login = () => {
   const navigate = useNavigate(); // Inicializar useNavigate para redirección
   const { login } = useAuth(); // Obtener la función login del contexto de autenticación
