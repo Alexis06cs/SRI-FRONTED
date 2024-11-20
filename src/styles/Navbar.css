@@ -144,15 +144,16 @@
 
 @media only screen and (max-width: 480px) {
 .header{
-    display: flex;
+    display: block;
     flex-direction: column-reverse;
     padding: 12px;
     font-size: 15px;
-    width: 290px;
-
+    width: 357px;
+    float: none;
+    position: fixed;
 }
 
-.image-section {
+.nav__user__info__text {
   visibility: hidden;
 }
 

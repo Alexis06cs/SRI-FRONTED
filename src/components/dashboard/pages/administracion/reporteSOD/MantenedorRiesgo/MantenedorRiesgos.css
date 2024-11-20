@@ -78,3 +78,39 @@
 .btn-icon:hover .fa-trash {
   color: #ffffff !important;
 }
+
+@media screen and ( min-width: 20px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+.mr_container2{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15px;
+    position: fixed;
+
+}
+.mr_container1, .mr_container2 {
+    width: 100%;
+    text-align: right;
+}
+.image-section {
+    visibility: hidden;
+}
+
+.login-section h2 {
+    font-size: 22px;
+}
+
+.options {
+    font-size: 14px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.body {
+    overflow: hidden;
+}
+
+}

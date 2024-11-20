@@ -7,3 +7,39 @@
     grid-template-columns: repeat(3, 1fr); /* 3 columnas con igual ancho */
     gap: 20px; /* Espacio entre las tarjetas */
 }
+
+@media screen and ( min-width: 20px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15px;
+    position: fixed;
+
+}
+.container1, .container2 {
+    width: 100%;
+    text-align: right;
+}
+.image-section {
+    visibility: hidden;
+}
+
+.login-section h2 {
+    font-size: 22px;
+}
+
+.options {
+    font-size: 14px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.body {
+    overflow: hidden;
+}
+
+}
