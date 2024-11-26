@@ -5,10 +5,10 @@ import './Olvidaste.css'; // Asegúrate de que el archivo CSS esté correctament
 const Olvidaste = () => {
   return (
     <div className="container2">
-      <div className="image-section">
+      <div className="image-section_o">
         <img src="/imagenes/seguridad_sri.jpg" alt="Model Image" />
       </div>
-      <div className="login-section">
+      <div className="login-section_o">
         <div className="logo">
           <img src="/imagenes/logo_sri.png" alt="logo_sri" />
         </div>
@@ -16,7 +16,7 @@ const Olvidaste = () => {
         <p>Ingresa tu email y te enviaremos los pasos a seguir para recuperarla</p>
         <form>
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="cpsoluciones" />
+          <input type="email" id="email" name="email" placeholder="ingresa tu email" />
           <Link to="/recuperar" className="btn-link">
             Recuperar contraseña
           </Link>

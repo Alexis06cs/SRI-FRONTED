@@ -105,28 +105,146 @@ a:hover {
     text-align: center;
     margin-top: 20px;
 }
- */
 
- @media screen and ( min-width: 20px) {
+.container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
- }
- 
- @media only screen and (max-width: 480px) {
- .container2{
-     display: flex;
-     flex-direction: column-reverse;
-     padding: 15px;
-     position: fixed;
- 
- }
- .container1, .container2 {
-     width: 100%;
-     text-align: right;
- }
- 
- .login-section h2 {
-     font-size: 22px;
- }
+.image-section, .login-section {
+    flex: 1;
+    padding: 20px;
+}
 
- 
- }
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.logo{
+    width: 30%;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-block: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* label {
+    margin-top: 10px;
+    font-weight: bold;
+} */
+
+.container_o {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-section_o, .login-section_o {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-section_o img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-section_o {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px;
+    margin: 10px;
+}
+
+.logo{
+    width: 30%;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-block: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 5px;
+    font-weight: bold;
+} 
+
+input:hover {
+    background: #f7f7f7dc;
+}
+
+@media screen and ( min-width: 20px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+.container2{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15px;
+    position: fixed;
+}
+
+.image-section_o {
+    visibility: hidden;
+}
+
+.login-section_o h2 {
+    font-size: 22px;
+}
+
+.options {
+    font-size: 14px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.body {
+    overflow: hidden;
+}
+
+}

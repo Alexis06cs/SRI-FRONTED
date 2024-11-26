@@ -227,12 +227,8 @@ input:hover {
     flex-direction: column-reverse;
     padding: 15px;
     position: fixed;
+}
 
-}
-.container1, .container2 {
-    width: 100%;
-    text-align: right;
-}
 .image-section {
     visibility: hidden;
 }
