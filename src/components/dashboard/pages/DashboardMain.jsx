@@ -58,7 +58,7 @@ const DashboardMain = () => {
   return (
     <div className="db_container">
       <div className='db_container_intro'>
-        <div className="db_container">
+        <div className="db_container db__container--cards">
           <div className='db_continer_intro_card'>
             <div className="db_container_card1">
               <div className="card-header">
@@ -159,8 +159,10 @@ const DashboardMain = () => {
             </div>
           </div>
         </div>
-        <div className='db_container_intro_graficos_finales_2'>
-          <TrafficSourcesChart />
+        <div className="graficos-finales__container">
+          <div className='db_container_intro_graficos_finales_2'>
+            <TrafficSourcesChart />
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,6 @@
+.dashboard-layout:has(.header.nav--visible) .sidebar{
+  transform: translateX(0);
+}
 
 .sidebar{
   width: var(--aside__width);
@@ -9,6 +12,8 @@
   background-color: var(--color__white);
   padding: 16px;
   box-shadow: 1px 0px 1px 0px #aaa8;
+  transition: all 0.3s ease;
+  transform: translateX(-100%);
 
   & .sidebar__container{
     overflow: visible;
@@ -147,15 +152,21 @@
 
 }
 
-@media only screen and (max-width: 480px) {
-.sidebar{
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 12px;
-    font-size: 16px;
-    width: 200px;
-    position: fixed;
+@media screen and (max-width: 480px) {
+:root{
+  --aside__width: 180px;
+}
 
+.sidebar{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 12px;
+  font-size: 16px;
+  position: fixed;
+  
+  & .sidebar__action{
+    font-size: 12px;
+  }
 }
 
 .body {
