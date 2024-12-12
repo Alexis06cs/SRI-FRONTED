@@ -60,10 +60,16 @@
 */
 
 /******************* MAIN *******************/
-.main{
+.dashboard-layout:has(.header.nav--visible) .main{
   width: calc(100% - var(--aside__width));
+}
+
+.main{
+  width: 100%;
   margin-left: auto;
   margin-top: var(--header__height);
   min-height: calc(100dvh - var(--header__height));
   background-color: #F8F7F7;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }

@@ -20,7 +20,11 @@
 
 .db_container{
     padding: 4px 2px ;
+    padding: 12px;
+}
 
+.db__container--cards{
+    padding: 0;
 }
 
 .db_continer_intro_card {
@@ -31,22 +35,42 @@
     margin: 20px;
 }
 
+.db_continer_intro_card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    justify-content: space-between;
+    margin: 0;
+}
+
 .db_container_card1, .db_container_card2, .db_container_card3, .db_container_card4 {
-    flex: 1; /* Todas las tarjetas ocuparán el mismo espacio */
+    /* flex: 1; */ /* Todas las tarjetas ocuparán el mismo espacio */
     border: 1px solid #e0e0e0;
     border-radius: 2px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-color: white;
-    min-width: 200px; /* Asegura que las tarjetas no sean demasiado pequeñas */
-    max-width: 300px; /* Controla el tamaño máximo de las tarjetas */
-    width: 251.956px;
+    /* min-width: 200px; */ /* Asegura que las tarjetas no sean demasiado pequeñas */
+    /* max-width: 300px; */ /* Controla el tamaño máximo de las tarjetas */
+    /* width: 251.956px; */
     height: 123.946px;
     padding: 2px 9px;
+    padding: 10px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .increment {
     text-align: center;
     color: #666;
     margin: 10px 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .card-header {
@@ -62,8 +86,14 @@
 .header-chart {
     display: flex; /* Usar Flexbox para alinear en fila */
     justify-content: space-between; /* Separar los elementos */
+    align-items: center;
+    flex-grow: 1;
   }
-  
+
+.card-footer{
+    padding: 10px 10px 0;
+}
+
   .total-number {
     font-size: 20px;
     font-weight: bold;
@@ -78,7 +108,8 @@
     margin-bottom: 0px;
   }
   .card-chart {
-    flex: 1; /* El gráfico ocupará el espacio restante */
+    width: 0;
+    flex-grow: 1; /* El gráfico ocupará el espacio restante */
     margin-left: 10px;
     margin-bottom: 17px;
   }
@@ -94,7 +125,9 @@
 .db_container_intro_grafico_medium {
     margin: 0 auto; /* Centra el contenedor en su contenedor padre */
     height: 400px; /* Fija una altura para el gráfico */
-    max-width: 95%; /* Evita que el contenedor ocupe demasiado espacio en pantallas pequeñas */
+    height: max-content;
+    /* max-width: 95%; */ /* Evita que el contenedor ocupe demasiado espacio en pantallas pequeñas */
+    width: 100%;
     background-color: white; /* Fondo blanco */
     border: 1px solid #e0e0e0; /* Borde gris claro */
     border-radius: 8px; /* Bordes redondeados */
@@ -113,6 +146,8 @@
     .db_container_intro_grafico_medium {
         height: auto; /* Permite que el gráfico crezca en altura en pantallas pequeñas */
         padding: 10px;
+        margin-block: 20px;
+        margin-inline: auto;
     }
 }
 
@@ -120,7 +155,7 @@
 .db_container_intro_graficos_finales {
     display: flex;
     gap: 20px;
-    padding: 20px;
+    padding-block: 20px;
     align-items: stretch; /* Asegura que ambos cuadros tengan la misma altura */
     
 }
@@ -175,6 +210,13 @@
     width: 300px; /* Ancho específico */
     height: 300px; /* Alto específico */
     margin: 0 auto; /* Centrar el gráfico */
+    width: 100%;
+    height: max-content;
+    margin-inline: auto;
+}
+
+.graficos-finales__container{
+    flex-grow: 2;
 }
 
 /* Estilo para el segundo cuadro, que es más ancho */
@@ -195,15 +237,23 @@
 }
 
 /* Estilo responsivo para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .db_container_intro_graficos_finales {
         flex-direction: column;
+        padding: 0;
     }
 
     .db_container_intro_graficos_finales_1, 
     .db_container_intro_graficos_finales_2 {
         width: 100%; /* Los hace ocupar todo el ancho cuando están apilados */
         height: auto; /* Permite que la altura sea automática cuando están en columna */
+        padding: 0;
+    }
+
+    .graficos-finales__container{
+        width: 100%;
+        padding-bottom: 1rem;
+        overflow: auto;
     }
 }
 
@@ -218,7 +268,11 @@
     flex-direction: column;
     padding: 12px;
     font-size: 15px;
-    width: 290px;
+    /* width: 290px; */
+
+    &.db__container--cards{
+        padding: 0;
+    }
 
 }
 
@@ -227,8 +281,6 @@
 }
 
 
-.db_continer_intro_card {
+/* .db_continer_intro_card {
     font-size: 150px;
-   
-}
-}
+} */
