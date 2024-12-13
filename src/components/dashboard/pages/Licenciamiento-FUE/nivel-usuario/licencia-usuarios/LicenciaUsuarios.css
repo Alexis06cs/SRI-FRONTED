@@ -1,4 +1,4 @@
-.mr_container2 {
+.mr_containerfue {
     position: relative;
     top: 30px;
     padding: 20px;
@@ -7,9 +7,10 @@
     width: 100%;
     max-width: 900px;
     margin: 20px;
+
 }
 
-.fue {
+.fue4 {
     background-color: #0ABD8C;
     color: white;
     padding: 10px 20px;

@@ -61,8 +61,8 @@ const LicenciaUsuarios = () => {
 
     return (
       <>
-        <div className="fue">Total FUE: {Math.ceil(totalFUE)}</div>
-        <div className="mr_container">
+        <div className="fue4">Total FUE: {Math.ceil(totalFUE)}</div>
+        <div className="mr_containerfue">
           <div className="mantenedor-riesgos-container">
             <h1>Vista General</h1>
             {loading && <p>Cargando datos...</p>}

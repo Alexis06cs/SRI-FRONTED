@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importar useNavigate de React Router
+import { Link } from 'react-router-dom';
 import { useAuth } from './AuthContext'; // Importar el contexto de autenticación
 import './Login.css'; // Importar el archivo CSS
 import usuarios from './usuarios'; // Importar la lista de usuarios "en duro"
