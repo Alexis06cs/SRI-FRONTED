@@ -183,6 +183,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Modal editar usuario */
@@ -192,6 +193,11 @@
     border-radius: 10px;
     width: 700px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 0 10px;
+    max-height: 80vh; /* Limita la altura máxima del modal */
+    overflow-y: auto; /* Permite el scroll si el contenido excede la altura */
+    
 }
 
 /* Título del modal */
@@ -208,6 +214,7 @@
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .modal-row {
@@ -215,6 +222,7 @@
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .form-group {
@@ -222,6 +230,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-width: 220px;
 }
 
 .form-group label {
@@ -235,12 +244,13 @@
     border-radius: 5px;
     border: 1px solid #ddd;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* Botones del formulario */
 .form-buttons-right {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 10px;
     margin-top: 20px;
 }
@@ -252,6 +262,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px 20px;
 }
 
 
@@ -262,6 +273,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px 20px;
 }
 
 .btn-guardar {
@@ -277,4 +289,97 @@
 .btn-cancelar:hover,
 .btn-guardar:hover {
     opacity: 0.9;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+
+
+    .mu_container3 {
+        padding: 15px;
+    }
+
+    .usuarios-container3 h1 {
+        font-size: 20px;
+    }
+
+    .usuarios-table th,
+    .usuarios-table td {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .acciones-iconos {
+        gap: 8px;
+    }
+
+    .btn-agregar {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .md_editar {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modal-header-row,
+    .modal-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+        width: 100%;
+    }
+
+    .form-buttons-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-eliminar,
+    .btn-cancelar2,
+    .btn-guardar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .mu_container3 {
+        padding: 10px;
+    }
+
+    .usuarios-table th,
+    .usuarios-table td {
+        font-size: 12px;
+    }
+
+    .btn-agregar {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .md_editar {
+        width: 100%;
+        padding: 10px;
+        overflow-y: auto; 
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+        font-size: 14px;
+    }
+
+    .form-buttons-right {
+        flex-direction: column;
+    }
+
+    .btn-eliminar,
+    .btn-cancelar2,
+    .btn-guardar {
+        padding: 8px 16px;
+    }
 }

@@ -17,7 +17,6 @@
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
-    
 }
 
 .carga-datos-container2 {
@@ -32,7 +31,7 @@
 /* Formulario de carga */
 .carga-datos-forms {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 200px; 
+    grid-template-columns: repeat(3, 1fr) 200px;
     gap: 20px;
     align-items: center;
     width: 100%;
@@ -52,8 +51,9 @@
     font-size: 28px;
 }
 
+/* Estilos del formulario */
 .form-group {
-    display: flex;
+    display: flex; 
     flex-direction: column;
 }
 
@@ -110,7 +110,12 @@ select, input[type="file"] {
 
 .cd_table {
     padding: 0px;
+    max-height: 400px; /* Limitar altura de la tabla */
+    overflow-y: auto; /* Hacer que la tabla sea desplazable */
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
+
 /* Tabla de cargas realizadas */
 .cargas-table {
     width: 100%;
@@ -159,7 +164,7 @@ select, input[type="file"] {
 }
 
 .btn-icon:hover i {
-    color: #245cf4 ;
+    color: #245cf4;
 }
 
 .btn-icon .fa-trash {
@@ -168,4 +173,28 @@ select, input[type="file"] {
 
 .btn-icon:hover .fa-trash {
     color: #c82333;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .carga-datos-forms {
+        grid-template-columns: 1fr;
+        width: auto;
+    }
+
+    .btn-cancelar, .btn-guardar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .cargas-table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .cargas-table th, .cargas-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
 }

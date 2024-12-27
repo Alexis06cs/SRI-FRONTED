@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <div className="image-section">
+      <div className="image-sectionlo">
         <img src="./imagenes/seguridad_sri.jpg" alt="portada" />
       </div>
       <div className="login-section">
