@@ -124,12 +124,12 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.image-section, .login-section {
+.image-sectionlo, .login-sectionlo {
     flex: 1;
     padding: 20px;
 }
 
-.image-section img {
+.image-sectionlo img {
     width: 100%;
     height: 100%;
     object-fit: cover;

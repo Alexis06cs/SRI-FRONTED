@@ -18,6 +18,7 @@
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    flex-wrap: wrap;
 }
 
 .user3 {
@@ -28,17 +29,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 15px;
 }
 
 .input-group-simulacion {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    flex-wrap: wrap; 
 }
 
 .input-group-simulacion label {
     margin-right: 10px;
-    min-width: 15px;
+    min-width: 100px;
     text-align: right;
 }
 
@@ -74,6 +77,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .estado-usuarios label  {
@@ -90,17 +94,23 @@
     display: flex;
     gap: 12px;
     margin-left: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
     
 }
 
 .table-container {
     margin-top: 20px;
+    overflow-x: auto; /* Agregado para scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Suaviza el scroll en dispositivos táctiles */
+    min-height: 400px;
 }
 
 .table-container table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
+    min-width: 600px;
 }
 
 .table-container th, .table-container td {
@@ -161,6 +171,7 @@
 
 .table-container {
     min-height: 400px; /* Ajusta según el tamaño de la tabla para mantener el espacio */
+
 }
 
 .no-data-message {
@@ -168,4 +179,58 @@
     margin: 20px;
     font-size: 16px;
     color: #999;
+}
+
+@media screen and (max-width: 768px) {
+    .simulacion-container {
+        padding: 10px;
+    }
+
+    .simulacion-filtros {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .input-group-simulacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-group-simulacion label,
+    .input-group-simulacion input {
+        margin-bottom: 5px;
+    }
+
+    .buscar-btn {
+        align-self: flex-start;
+    }
+
+    .checkbox-group {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .checkbox-group span {
+        margin-left: 0;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px; /* Asegura que el scroll horizontal sea necesario si es más pequeño */
+    }
+
+    .pagination-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pagination-btn {
+        width: 100%;
+        text-align: center;
+    }
 }

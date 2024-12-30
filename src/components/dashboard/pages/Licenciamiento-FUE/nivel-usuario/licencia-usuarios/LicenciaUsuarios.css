@@ -51,10 +51,12 @@ table th, table td {
 table th {
     background-color: #0ABD8C;
     color: white;
+    text-align: center;
 }
 
 table td {
     background-color: #fff;
+    text-align: center;
 }
 
 /* Para hacer la tabla 'Vista Detallada' más grande */
@@ -64,4 +66,26 @@ table td {
 
 .vista-general th, .vista-detallada th {
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .mr_containerfue {
+        padding: 15px;
+        margin: 5px auto;
+    }
+
+    .fue4 {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+
+    table th, table td {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }

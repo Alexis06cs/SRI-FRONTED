@@ -1,13 +1,14 @@
 .oc_container {
-    padding: 10px;
+    padding: 20px;
 }
 
 .oc_container_card {
-    margin: 40px;
+    margin: 20px auto;
     padding: 30px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-top: 40px;
+    max-width: 1200px; /* Limita el ancho máximo */
 }
 
 .oc_container_filters {
@@ -19,6 +20,7 @@
 
 .oc_container_filters label {
     margin-right: 5px;
+    font-weight: bold;
 }
 
 .oc_container_filters select {
@@ -36,7 +38,12 @@
     font-size: 14px;
 }
 .titulo {
-margin: 18px;
+    margin: 18px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
 }
 
 .oc_container_filters button:hover {
@@ -54,11 +61,15 @@ margin: 18px;
     cursor: pointer;
     color: white;
     border-radius: 5px;
+    border: none;
+    flex-shrink: 0; /* Evita que los botones se reduzcan */
+    white-space: nowrap; /* Evita que el texto se divida */
 }
 
 .oc_container_table {
     width: 100%;
     margin-top: 20px;
+    overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
 }
 
 table {
@@ -67,9 +78,10 @@ table {
 }
 
 table th, table td {
-    padding: 5px; /* Reduce el padding para que las filas sean más delgadas */
+    padding: 10px; /* Reduce el padding para que las filas sean más delgadas */
     text-align: left;
     border-bottom: 1px solid #ddd;
+    font-size: 14px;
 }
 
 table th {
@@ -83,7 +95,7 @@ table td {
 }
 
 table td button {
-    padding: 5px 10px; /* Reduce el padding del botón */
+    padding: 5px 15px; /* Reduce el padding del botón */
     border: none;
     background-color: #0ABD8C;
     color: white;
@@ -93,4 +105,40 @@ table td button {
 
 table td button:hover {
     background-color: #0d7056;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .oc_container_filters {
+        justify-content: center;
+    }
+
+    .btn_buscar, .btn_histrograma, .btn_exportar_excel {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .oc_container_card {
+        padding: 15px;
+    }
+
+    .btn_buscar, .btn_histrograma, .btn_exportar_excel {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
 }

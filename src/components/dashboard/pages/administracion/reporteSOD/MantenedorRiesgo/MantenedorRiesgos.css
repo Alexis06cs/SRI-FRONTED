@@ -1,14 +1,14 @@
 /* Contenedor principal */
 .mr_container2 {
   position: relative;
-    top: 30px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px;
+  top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
 }
 
 /* Título principal */
@@ -79,38 +79,68 @@
   color: #ffffff !important;
 }
 
-@media screen and ( min-width: 20px) {
+/* Responsividad */
 
+/* Pantallas medianas (tablets y más pequeñas) */
+@media screen and (max-width: 768px) {
+  .mr_container2 {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .mantenedor-riesgos-container h1 {
+    font-size: 20px;
+  }
+
+  .riesgos-table th,
+  .riesgos-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn-icon {
+    font-size: 14px;
+  }
 }
 
+/* Pantallas pequeñas (teléfonos) */
 @media only screen and (max-width: 480px) {
-.mr_container2{
+  .mr_container2 {
     display: flex;
     flex-direction: column-reverse;
     padding: 15px;
-    position: fixed;
+    position: relative;
+    margin: 0;
+  }
 
-}
-.mr_container1, .mr_container2 {
+  .riesgos-table {
+    display: block;
     width: 100%;
-    text-align: right;
+    overflow-x: auto;
+  }
+
+  .riesgos-table th,
+  .riesgos-table td {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .mantenedor-riesgos-container h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .acciones-iconos {
+    gap: 5px;
+  }
+
+  .btn-icon {
+    font-size: 12px;
+    padding: 3px;
+  }
 }
+
+/* Ocultar elementos no esenciales en móviles */
 .image-section {
-    visibility: hidden;
-}
-
-.login-section h2 {
-    font-size: 22px;
-}
-
-.options {
-    font-size: 14px;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.body {
-    overflow: hidden;
-}
-
+  display: none;
 }

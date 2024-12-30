@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './TransaccionesCriticas.css';
 import ReactApexChart from 'react-apexcharts';
 
-
-
 const TransaccionesCriticas = () => {
   // Definimos los datos y opciones del gráfico
   const [chartOptions, setChartOptions] = useState({
@@ -45,7 +43,6 @@ const TransaccionesCriticas = () => {
       }
     },
     colors: ['#0ABD8C'] 
-    
   });
 
   const [chartSeries, setChartSeries] = useState([
@@ -95,50 +92,56 @@ const TransaccionesCriticas = () => {
         </div>
 
         <div className="ventas_container">
-          <h2>Ventas</h2>
-          <div className="table_buttons">
+        <h2>Ventas</h2>
+        <div className="table_buttons">
             <button>Histograma</button>
             <button>Exportar a Excel</button>
           </div>
-          <div className="ventas_table">
-            <div className="table_header">
-              <div className="table_cell">Lugar</div>
-              <div className="table_cell">Transacción</div>
-              <div className="table_cell">Descripción</div>
-              <div className="table_cell">Cantidad</div>
-              <div className="table_cell">Acciones</div>
-            </div>
-                <div className="table_row">
-                <div className="table_cell">1</div>
-                <div className="table_cell">VD01</div>
-                <div className="table_cell">Crear deudor (Comercial)</div>
-                <div className="table_cell">23</div>
-                <div className="table_cell"><button>Histograma</button></div>
-                </div>
-                <div className="table_row">
-                <div className="table_cell">2</div>
-                <div className="table_cell">VD01</div>
-                <div className="table_cell">Crear deudor (Comercial)</div>
-                <div className="table_cell">23</div>
-                <div className="table_cell"><button>Histograma</button></div>
-                </div>
-                <div className="table_row">
-                <div className="table_cell">3</div>
-                <div className="table_cell">VD01</div>
-                <div className="table_cell">Crear deudor (Comercial)</div>
-                <div className="table_cell">23</div>
-                <div className="table_cell"><button>Histograma</button></div>
-                </div>
-                <div className="table_row">
-                <div className="table_cell">4</div>
-                <div className="table_cell">VD01</div>
-                <div className="table_cell">Crear deudor (Comercial)</div>
-                <div className="table_cell">23</div>
-                <div className="table_cell"><button>Histograma</button></div>
-                </div>
-
-            {/* Otras filas */}
+          <div className="table_scroll">
+          <table className="ventas_table" >
+          <thead>
+            <tr>
+              <th>Lugar</th>
+              <th>Transacción</th>
+              <th>Descripción</th>
+              <th>Cantidad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>VD01</td>
+              <td>Crear deudor (Comercial)</td>
+              <td>23</td>
+              <td><button>Histograma</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>VD01</td>
+              <td>Crear deudor (Comercial)</td>
+              <td>23</td>
+              <td><button>Histograma</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>VD01</td>
+              <td>Crear deudor (Comercial)</td>
+              <td>23</td>
+              <td><button>Histograma</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>VD01</td>
+              <td>Crear deudor (Comercial)</td>
+              <td>23</td>
+              <td><button>Histograma</button></td>
+            </tr>
+          </tbody>
+        </table>
           </div>
+
+       
         </div>
 
         <div class="filters2">
