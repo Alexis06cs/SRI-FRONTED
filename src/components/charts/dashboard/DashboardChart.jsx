@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
-import dayjs from 'dayjs';
 import Modal from '../../modals/Modal';
 
 const DashboardChart = () => {
@@ -10,7 +9,7 @@ const DashboardChart = () => {
   const [chartData, setChartData] = useState({
     series: [{
       name: "Riesgos",
-      data: [] // Inicialmente vacío, se llenará con los datos de la API
+      data: [] // Inicialmente vacío
     }],
     options: {
       chart: {
@@ -18,95 +17,89 @@ const DashboardChart = () => {
         height: 380,
         events: {
           dataPointSelection: (event, chartContext, { dataPointIndex }) => {
-            const selectedValue = chartData.series[0].data[dataPointIndex];
-            setSelectedData({
-              category: chartData.options.xaxis.categories[dataPointIndex],
-              value: selectedValue
-            });
-            setIsModalOpen(true);
+            if (chartData.series[0]?.data[dataPointIndex] !== undefined) {
+              const selectedValue = chartData.series[0].data[dataPointIndex];
+              setSelectedData({
+                category: chartData.options.xaxis.categories[dataPointIndex],
+                value: selectedValue
+              });
+              setIsModalOpen(true);
+            }
           },
-          dataPointMouseEnter: (event, chartContext, { dataPointIndex, w }) => {
-            setHoverModal({ show: true, x: event.clientX, y: event.clientY });
-          },
-          dataPointMouseLeave: () => {
-            setHoverModal({ show: false });
-          }
-        }
+        },
       },
       xaxis: {
-        categories: [], // Inicialmente vacío, se llenará con los procesos
+        categories: [] // Inicialmente vacío
       },
-      colors: ['#0ABD8C', '#0ABD8C'],
+      colors: ['#0ABD8C'],
       title: {
         text: 'Riesgo de Proceso Empresarial',
       },
       dataLabels: {
         enabled: true,
-        style: {
-          fontSize: '16px', // Aumenta el tamaño de la fuente
-          colors: ['#000']   // Color negro para los números
-        },
-        formatter: (val) => val, // Mostrar el valor encima de cada barra
-        offsetY: -10 // Ajuste para que el valor aparezca justo encima de la barra
-      }
+        formatter: (val) => val,
+      },
     }
   });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}desc_proc_emp`);
-        const data = await response.json();
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}desc_proc_emp`);
+      const data = await response.json();
 
-        const processNames = data.map(item => item.desc_proc_emp);
-        const totals = data.map(item => parseInt(item.total, 10));
-
-        setChartData(prevData => ({
-          ...prevData,
-          series: [{
-            ...prevData.series[0],
-            data: totals
-          }],
-          options: {
-            ...prevData.options,
-            xaxis: {
-              ...prevData.options.xaxis,
-              categories: processNames
-            }
-          }
-        }));
-      } catch (error) {
-        console.error('Error al obtener los datos de la API', error);
+      // Validar y procesar los datos
+      if (!Array.isArray(data) || data.length === 0) {
+        console.error('API devolvió datos inválidos o vacíos:', data);
+        return;
       }
-    };
 
+      const categories = [];
+      const seriesData = [];
+
+      data.forEach(item => {
+        if (item.desc_proc_emp && typeof item.total === 'number') {
+          categories.push(item.desc_proc_emp);
+          seriesData.push(item.total);
+        }
+      });
+
+      if (categories.length === 0 || seriesData.length === 0) {
+        console.error('Datos procesados están vacíos:', { categories, seriesData });
+        return;
+      }
+
+      setChartData({
+        series: [{ name: "Riesgos", data: seriesData }],
+        options: {
+          ...chartData.options,
+          xaxis: { ...chartData.options.xaxis, categories },
+        },
+      });
+    } catch (error) {
+      console.error('Error al obtener los datos de la API:', error);
+    }
+  };
+
+  useEffect(() => {
     fetchData();
   }, []);
 
-  if (chartData.series[0].data.length === 0) {
-    return <div>Cargando datos...</div>;
+  if (
+    chartData.series[0]?.data?.length === 0 || 
+    chartData.options.xaxis?.categories?.length === 0
+  ) {
+    return <div>Cargando datos o sin datos disponibles...</div>;
   }
 
   return (
     <div style={{ position: 'relative' }}>
-      <ReactApexChart options={chartData.options} series={chartData.series} type="bar" height={380} />
+      <ReactApexChart
+        options={chartData.options}
+        series={chartData.series}
+        type="bar"
+        height={380}
+      />
       {isModalOpen && <Modal data={selectedData} onClose={() => setIsModalOpen(false)} />}
-      {hoverModal.show && (
-        <div
-          className="hover-modal"
-          style={{
-            position: 'absolute',
-            top: hoverModal.y,
-            left: hoverModal.x,
-            backgroundColor: '#fff',
-            padding: '5px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-            zIndex: 1000
-          }}
-        >
-        </div>
-      )}
     </div>
   );
 };

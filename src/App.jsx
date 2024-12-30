@@ -4,9 +4,6 @@ import './index.css';
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import { AuthProvider } from './../src/components/auth/login/AuthContext';
-import ProtectedRoute from './components/auth/login/ProtectedRoute';
-
 // Componentes de autenticación
 import Login from './components/auth/login/Login';
 import Olvidaste from './components/auth/olvidaste/Olvidaste';
@@ -43,137 +40,54 @@ import ReportedeRiesgos from './components/dashboard/pages/analisis-accesos/repo
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Routes>
-          {/* Rutas de autenticación */}
-          <Route path="/" element={<Login />} />
-          <Route path="/olvidaste" element={<Olvidaste />} />
-          <Route path="/recuperar" element={<Recuperar />} />
+    <Router>
+      <Routes>
+        {/* Rutas de autenticación */}
+        <Route path="/" element={<Login />} />
+        <Route path="/olvidaste" element={<Olvidaste />} />
+        <Route path="/recuperar" element={<Recuperar />} />
 
-          {/* Rutas del dashboard */}
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <DashboardLayout />
-              </ProtectedRoute>
-            }
-          >
-            {/* Página principal del dashboard */}
-            <Route index element={<DashboardMain />} />
-            <Route path="analisis-accesos" element={<AnalisisAccesos />} />
-            <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea" element={<RiesgoDeLinea />} />
-            <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea/riesgo-proceso-empresarial" element={<RiesgoProcesoEmpresarial />} />
-            <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea/riesgo-por-nivel" element={<RiesgoPorNivel />} />
-            <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea/riesgo-en-el-tiempo" element={<RiesgoEnElTiempo />} />
-            <Route path="analisis-accesos/riesgos-usuarios/riesgo-general" element={<RiesgoGeneral />} />
-            <Route path="analisis-accesos/riesgos-usuarios/simulacion" element={<Simulacion />} />
-            <Route path="reporte-riesgos" element={<ReportedeRiesgos />} />
+        {/* Rutas del dashboard */}
+        <Route
+          path="/dashboard"
+          element={<DashboardLayout />}
+        >
+          {/* Página principal del dashboard */}
+          <Route index element={<DashboardMain />} />
+          <Route path="analisis-accesos" element={<AnalisisAccesos />} />
+          <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea" element={<RiesgoDeLinea />} />
+          <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea/riesgo-proceso-empresarial" element={<RiesgoProcesoEmpresarial />} />
+          <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea/riesgo-por-nivel" element={<RiesgoPorNivel />} />
+          <Route path="analisis-accesos/riesgos-usuarios/riesgo-linea/riesgo-en-el-tiempo" element={<RiesgoEnElTiempo />} />
+          <Route path="analisis-accesos/riesgos-usuarios/riesgo-general" element={<RiesgoGeneral />} />
+          <Route path="analisis-accesos/riesgos-usuarios/simulacion" element={<Simulacion />} />
+          <Route path="reporte-riesgos" element={<ReportedeRiesgos />} />
 
-            <Route path="analisis-accesos/accesos-criticos" element={<AccesosCriticos />} />
-            <Route path="analisis-accesos/accesos-criticos/transacciones-criticas" element={<TransaccionesCriticas />} />
-            <Route path="analisis-accesos/accesos-criticos/objetos-criticos" element={<ObjetosCriticos />} />
+          <Route path="analisis-accesos/accesos-criticos" element={<AccesosCriticos />} />
+          <Route path="analisis-accesos/accesos-criticos/transacciones-criticas" element={<TransaccionesCriticas />} />
+          <Route path="analisis-accesos/accesos-criticos/objetos-criticos" element={<ObjetosCriticos />} />
 
-            {/* Licenciamiento */}
-            <Route path="licenciamiento-fue" element={<LicenciamientoFue />} />
-            <Route path="licenciamiento-fue/nivel-usuarios" element={<NivelUsuarios />} />
-            <Route path="licenciamiento-fue/nivel-usuarios/licencia-usuarios" element={<LicenciaUsuarios />} />
-            <Route path="licenciamiento-fue/nivel-usuarios/simulacion" element={<Simulacion />} />
+          {/* Licenciamiento */}
+          <Route path="licenciamiento-fue" element={<LicenciamientoFue />} />
+          <Route path="licenciamiento-fue/nivel-usuarios" element={<NivelUsuarios />} />
+          <Route path="licenciamiento-fue/nivel-usuarios/licencia-usuarios" element={<LicenciaUsuarios />} />
+          <Route path="licenciamiento-fue/nivel-usuarios/simulacion" element={<Simulacion />} />
 
-            {/* Rutas de Administración (protegidas para rol admin) */}
-            <Route
-              path="administracion"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <Administracion />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/mantenedor"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <Mantenedor />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/mantenedor/empresa"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <MantenedorEmpresas />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/mantenedor/usuario"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <MantenedorUsuarios />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/reporte-sod"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <ReporteSOD />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/reporte-sod/carga-datos-riesgo"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <CargaDeDatos />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/reporte-sod/mantenedor-riesgos"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <MantenedorRiesgos />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/carga-fue"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <CargaFue />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/carga-fue/mantenedor-ruleset"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <MantenedorRuselet />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/accesos-criticos/carga-transacciones-criticas"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <CargaTransacciones />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="administracion/log"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <Logs />
-                </ProtectedRoute>
-              }
-            />
-          </Route>
-        </Routes>
-      </Router>
-    </AuthProvider>
+          {/* Rutas de Administración */}
+          <Route path="administracion" element={<Administracion />} />
+          <Route path="administracion/mantenedor" element={<Mantenedor />} />
+          <Route path="administracion/mantenedor/empresa" element={<MantenedorEmpresas />} />
+          <Route path="administracion/mantenedor/usuario" element={<MantenedorUsuarios />} />
+          <Route path="administracion/reporte-sod" element={<ReporteSOD />} />
+          <Route path="administracion/reporte-sod/carga-datos-riesgo" element={<CargaDeDatos />} />
+          <Route path="administracion/reporte-sod/mantenedor-riesgos" element={<MantenedorRiesgos />} />
+          <Route path="administracion/carga-fue" element={<CargaFue />} />
+          <Route path="administracion/carga-fue/mantenedor-ruleset" element={<MantenedorRuselet />} />
+          <Route path="administracion/accesos-criticos/carga-transacciones-criticas" element={<CargaTransacciones />} />
+          <Route path="administracion/log" element={<Logs />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

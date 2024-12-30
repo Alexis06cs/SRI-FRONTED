@@ -1,26 +1,27 @@
-# Etapa 1: Construcción de la aplicación
-FROM node:18 as build
+# Etapa de construcción
+FROM node:18 AS build
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
 RUN npm run build
 
-# Etapa 2: Servir la aplicación con Nginx
+# Etapa de producción
 FROM nginx:alpine
 
-# Copiar los archivos de 'dist' (construidos por Vite) al directorio público de Nginx
+# Copiar los archivos de build al directorio de NGINX
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copiar la configuración personalizada de Nginx
+# Copiar el archivo de configuración de NGINX
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Exponer el puerto 8080 para Cloud Run
+# Exponer el puerto 8080
 EXPOSE 8080
 
+# Comando para iniciar NGINX
 CMD ["nginx", "-g", "daemon off;"]

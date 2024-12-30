@@ -126,7 +126,7 @@ const Sidebar = () => {
                 {openMenus.licenciamiento && (
                   <ul className="sidebar__submenu">
                     <li>
-                    <Link className="sidebar__action_sub" to="/dashboard/licenciamiento-fue/nivel-usuarios/simulacion">
+                    <Link className="sidebar__action_sub2" to="/dashboard/licenciamiento-fue/nivel-usuarios/simulacion">
                                 Nivel de Usuarios
                     </Link>
                     </li>

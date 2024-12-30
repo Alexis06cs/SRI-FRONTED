@@ -3,11 +3,11 @@ import './Recuperar.css';  // Asegúrate de que el archivo CSS esté correctamen
 
 const Recuperar = () => {
   return (
-    <div className="container_r">
-      <div className="image-section_r">
+    <div className="container">
+      <div className="image-section">
         <img src="/imagenes/seguridad_sri.jpg" alt="Model Image" />
       </div>
-      <div className="login-section_r">
+      <div className="login-section">
         <div className="logo">
           <img src="/imagenes/logo_sri.png" alt="logo_sri" />
         </div>
@@ -19,7 +19,7 @@ const Recuperar = () => {
           <label htmlFor="repeat-password">Repetir Contraseña</label>
           <input type="password" id="repeat-password" name="repeat-password" placeholder="********" />
           
-          <button type="submit" className="boton">
+          <button type="submit">
             Continuar
           </button>
           

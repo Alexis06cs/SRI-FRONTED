@@ -21,7 +21,7 @@
     background-color: #0ABD8C;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 0px 30px;
     margin: 10px 0px;
@@ -44,7 +44,7 @@
     color: white;
     margin: 5px 0px 10px 0px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 10px;
   }
@@ -53,7 +53,7 @@
     color: white;
     margin: 5px 0px 10px 0px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 10px 30px;
   }

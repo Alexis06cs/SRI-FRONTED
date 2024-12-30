@@ -25,9 +25,8 @@
   .rp_container_zero_search_riesgos h4 {
     font-size: 22px;
     padding-left: 20px;
-    padding: 20px 5px 14px 20px;
   }
-  .rp_container_zero_search_riesgos_file_one { 
+  .rp_container_zero_search_riesgos_file_one {
     display: flex;
     gap: 10px;
   }
@@ -41,7 +40,6 @@
     height: 4px;
     flex-shrink: 0;
     margin-top: 17px;
-    
   }
   .rp_container_zero_search_riesgos_file_one  {
     padding: 0px;
@@ -147,7 +145,6 @@
     height: 20px;
     cursor: pointer;
     margin: 0px;
-    
   }
 
   /* COMIENZO PARA REALIZAR LOS CARDS */
@@ -171,8 +168,8 @@
     
   }
   .rp_container_zero_card2_simulacion h4{
-    font-size: 22px;
-    font-style: bold;
+    font-size: 18px;
+    font-style: normal;
     font-weight: 600;
     line-height: normal;
     padding-left: 10px;
@@ -181,40 +178,38 @@
     padding: 1px 0px 0px 10px
   }
   .rp_container_zero_card2_simulacion_searchs span{
-    font-size: 16px;
+    font-size: 15px;
   }
   .rp_container_zero_card2_simulacion_searchs input {
-    width: 1300px;
+    width: 150px;
     height: 5px;
     flex-shrink: 0;
     border-radius: 5px;
-    background: #e2e2e2;
     border: 1px solid #000;
   }
   .rp_container_zero_card2_simulacion_searchs button{
-    width: 85px;
+    width: 112px;
     height: 30px;
-    flex-shrink: 40;
+    flex-shrink: 0;
     border-radius: 5px;
     background: #0ABD8C;
     color: white;
-    margin: 10px 0px 0px 20px;
+    margin: 16px 0px 0px 25px;
   }
   .rp_container_zero_card2_simulacion_file1,
   .rp_container_zero_card2_simulacion_file2{
-    padding: 1px 1px 0px 15px;
-
+    padding: 0px;
   }
 
   .rp_container_zero_card2_simulacion_file1 input {
     margin-left: 90px;
-    width: 220px;
-    height: 28px;
+    width: 300px;
+    height: 30px;
   }
   .rp_container_zero_card2_simulacion_file2 input {
     margin-left: 16px;
-    width: 220px;
-    height: 28px;
+    width: 300px;
+    height: 30px;
   }
 
   /* CONTAINER DE BOTONES DE GRAFICOS */
@@ -376,7 +371,6 @@
     padding: 20px;
     box-sizing: border-box; /* Incluye el padding en el ancho y altura */
     margin: 20px;
-    padding: 30px 1px 0px 15px;
   }
 
 

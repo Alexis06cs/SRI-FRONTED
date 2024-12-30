@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Olvidaste.css';
- 
+import { Link } from 'react-router-dom'; 
+import './Olvidaste.css'; 
+
 const Olvidaste = () => {
   return (
     <div className="container2">
@@ -16,11 +16,11 @@ const Olvidaste = () => {
         <p>Ingresa tu email y te enviaremos los pasos a seguir para recuperarla</p>
         <form>
           <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Ingresa tu correo electrónico"
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Ingresa tu correo electrónico" 
           />
           <div className="btn-container">
             <Link to="/recuperar" className="btn-link">
@@ -34,5 +34,5 @@ const Olvidaste = () => {
     </div>
   );
 };
- 
+
 export default Olvidaste;
