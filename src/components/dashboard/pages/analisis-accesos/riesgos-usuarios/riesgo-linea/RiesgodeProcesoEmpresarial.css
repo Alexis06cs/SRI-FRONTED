@@ -167,6 +167,7 @@
     padding: 20px 10px 20px 15px;
     
   }
+  
   .rp_container_zero_card2_simulacion h4{
     font-size: 18px;
     font-style: normal;
@@ -371,10 +372,34 @@
     padding: 20px;
     box-sizing: border-box; /* Incluye el padding en el ancho y altura */
     margin: 20px;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    overflow-x: hidden; /* Evita el scroll horizontal */
   }
 
+.rp_container_two th,
+.rp_container_two td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd; /* Bordes ligeros */
+}
 
+/* Estilo para el scroll horizontal */
+.rp_container_two::-webkit-scrollbar {
+  height: 8px; /* Altura del scrollbar */
+}
 
+.rp_container_two::-webkit-scrollbar-thumb {
+  background: #ccc; /* Color del scrollbar */
+  border-radius: 4px;
+}
+
+.rp_container_two::-webkit-scrollbar-thumb:hover {
+  background: #aaa; /* Color al pasar el cursor */
+}
+
+.rp_container {
+  margin: 5px;
+}
 
   .loader-wrapper {
     display: flex;
@@ -516,3 +541,138 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+<<<<<<< HEAD
+=======
+/* Dispositivos pequeños (smartphones) */
+@media screen and (max-width: 600px) {
+  .rp_container_zero {
+    grid-template-columns: 1fr; /* Todo en una columna */
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .rp_container_zero {
+    display: grid;
+    grid-template-columns: 1fr; /* Por defecto, una sola columna */
+    gap: 5px;
+  }
+
+  .rp_container_zero_card_2 {
+    grid-template-rows: auto; /* Asegura que las tarjetas se ajusten dinámicamente */
+  }
+
+  .rp_container_two table {
+    width: 190%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
+    border-collapse: collapse; /* Combina bordes */
+  }
+  
+   .rp_container_two {
+    width: 110%; /* Ocupa todo el ancho disponible */
+    height: 500px; /* Ajusta la altura automáticamente */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el padding en el ancho y altura */
+    margin: 5px;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+  }
+  
+  .rp_container_two th,
+  .rp_container_two td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd; /* Bordes ligeros */
+  }
+
+  .rp_container_zero_card2_simulacion_file1 input {
+    margin-left: 10px;
+    width: 180px;
+    height: 10px;
+  }
+  .rp_container_zero_card2_simulacion_file2 input {
+    margin-left: 10px;
+    width: 100px;
+    height: 10px;
+  }
+
+  .rp_container_zero_card2_simulacion {
+    /* width: 420px; */
+    height: 180px;
+    width: 98%;
+  }
+ 
+  .rp_container_zero_card2_grafico {
+    /* width: 420px; */
+    height: 350px;
+    width: 96%;
+    padding: 20px;
+    margin: 5px;
+    
+  }
+
+  .rp_container_zero_search_riesgos{
+    width: 88%;
+    height: 255px;    
+  }
+
+  .rp_container_zero_search_riesgos{
+    width: 380px;
+    height: 270px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: content-box;
+    font-size: 15px;
+  }
+
+  .rp_container_zero_card2_grafico span{
+    font-size: 15px;
+  }
+
+  .rp_container_zero_card2_grafico h4 {
+    margin-bottom: 15px;
+  }
+
+  input[type="checkbox"] {
+    width: 40px;
+    height: 25px;
+  }
+
+  .rp_container_zero_search_riesgos_file_one input {
+    border-radius: 2px;
+    width: 140px;
+
+  }
+
+  .rp_container_zero_search_riesgos_file_one .btn_rp_buscar {
+    width: 75px;
+  }
+
+  .rp_container_zero_card_2 {
+    width: 100%; /* Se ajusta para ocupar un ancho relativo del 48% del contenedor */
+  }
+
+}
+
+/* Tablets (pantallas medianas) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .rp_container_zero {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas medianas */
+    gap: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para gráficos */
+  }
+}
+
+/* Desktops (pantallas grandes) */
+@media screen and (min-width: 1025px) {
+  .rp_container_zero {
+    grid-template-columns: 2fr 1fr; /* Mayor proporción para la búsqueda */
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para gráficos */
+  }
+}
+>>>>>>> 0d69c18c83112fa00437f0afc4ba978ecd25492c
