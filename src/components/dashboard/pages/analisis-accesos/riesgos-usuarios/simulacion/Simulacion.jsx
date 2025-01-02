@@ -75,7 +75,7 @@ const Simulacion = () => {
 
     return (
         <div className="simulacion-container">
-            <div className="licencia_card">
+            <div className="licencia_card2">
                 <LicenciaUsuarios />
             </div>
             <h2 className="user">Usuarios</h2>
