@@ -1,5 +1,5 @@
 .Card_principal {
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -9,56 +9,56 @@
   }
   .buscador_usuario{
     display: flex;
-    gap: 35px;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .buscador_usuario span {
     padding-top: 15px;
   }
   .buscador_usuario input {
-    width: 270px;
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+   border-radius: 5px;
   }
   .btn_b_rriesgos{
     background-color: #0ABD8C;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     padding: 10px 30px;
     margin: 10px 0px;
-
   }
+
   .filtros_Rriesgos2{
     margin: 10px 150px 20px 0px;
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
   }
+
   .filtros_Rriesgos2 span {
     padding-top: 16px;
   }
   .filtros_Rriesgos2 input {
     width: 250px;
   }
-  .btn_ap_filtros {
+  
+  .btn_ap_filtros, .btn_export_excel {
     background-color: #0ABD8C;
     color: white;
-    margin: 5px 0px 10px 0px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     padding: 10px;
-    text-align: center;
+    margin: 8px;
   }
-  .btn_export_excel{
-    background-color: #0ABD8C;
-    color: white;
-    margin: 5px 0px 10px 0px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 10px 30px;
-    text-align: center;
+
+  .btn_ap_filtros:hover, .btn_export_excel:hover {
+    background-color: #0A9E7A;
   }
+
   .log_container {
     max-width: 100%;
     overflow: hidden;
@@ -81,6 +81,12 @@
     justify-content: center;
     align-items: center;
     margin: 20px auto;
+  }
+
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
   }
   
   
@@ -217,26 +223,66 @@
 @media screen and (max-width: 768px) {
   .buscador_usuario {
       flex-direction: column;
+      flex-direction: column;
+      gap: 10px;
+    flex-direction: column;
       gap: 10px;
   }
 
   .filtros_Rriesgos2 {
-      flex-direction: column;
-      gap: 10px;
-  }
-
-  .btn_ap_filtros, .btn_export_excel {
-      padding: 5px 10px;
+     display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 250px;
   }
 
   .pagination {
-      display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      gap: 10px;
+    flex-direction: column;
+      gap: 10px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .btn_b_rriesgos{
+    width: 270px;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .Card_principal {
+    padding: 10px;
+  }
+
+  .pagination {
       flex-direction: column;
       align-items: center;
       gap: 10px;
   }
 
-  .pagination-btn {
-      width: 100%;
+  .modal-content {
+    width: 95%;
   }
+
+  .filtros_Rriesgos2{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 250px;
+  }
+
+  .btn_b_rriesgos{
+    width: 250px;
+  }
+
+  .btn_ap_filtros, .btn_export_excel {
+   width: 280px;
+  }
+
+
 }

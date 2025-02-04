@@ -25,11 +25,12 @@ const MantenedorEmpresas = () => {
   ];
 
   return (
+    <div className="empresa-table-wrapper">
     <div className="me_container">
       <div className="empresa-container">
-        <h1>Lista de Empresa</h1>
         <div className="empresa-header">
-          <button className="btn-agregar2" onClick={showModal}>+ Agregar Empresa</button>
+        <h1>Lista de Empresa</h1>
+          <button className="btn-agregar" onClick={showModal}>+ Agregar Empresa</button>
         </div>
 
         <table className="empresa-table">
@@ -61,6 +62,7 @@ const MantenedorEmpresas = () => {
             ))}
           </tbody>
         </table>
+        </div>
 
         {modalVisible && (
           <div className="modal-overlay">

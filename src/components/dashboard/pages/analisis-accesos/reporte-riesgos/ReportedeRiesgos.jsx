@@ -172,7 +172,7 @@ const ReportedeRiesgos = () => {
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h2 className='texth2'>Filtros de Riesgos</h2>
+            <h2>Filtros de Riesgos</h2>
             <div>
               <label className='text'>Nivel de Riesgo:</label>
               <select value={nivelRiesgo} onChange={(e) => setNivelRiesgo(e.target.value)}>

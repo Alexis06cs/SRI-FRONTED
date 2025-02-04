@@ -1,12 +1,12 @@
 .mr_container2 {
-    position: relative;
     top: 30px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     width: 100%;
     max-width: 900px;
-    margin: 20px;
+    margin: 2px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .fue {
@@ -14,49 +14,52 @@
     color: white;
     padding: 10px 20px;
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
     justify-Content: center;
-    align-Items: center;
-    text-align: center;
     margin: 20px;
   }
 
-.licencia-usuarios-container {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+  .fue-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 
-h2 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 2.5em; 
-}
+  .table-responsive {
+    overflow-x: auto;
+  }
 
-table {
+.riesgos-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table th, table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-table th {
+    background-color: white;
+  }
+  
+  .riesgos-table th,
+  .riesgos-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .riesgos-table th {
     background-color: #0ABD8C;
     color: white;
-    text-align: center;
-}
+  }
 
-table td {
-    background-color: #fff;
+  .loading {
+    font-size: 18px;
+    color: #333;
     text-align: center;
-}
+  }
+  
+  .error {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+  }
 
 /* Para hacer la tabla 'Vista Detallada' más grande */
 .vista-detallada {
@@ -69,22 +72,46 @@ table td {
 
 
 @media (max-width: 768px) {
-    .mr_containerfue {
+    .mr_container2 {
         padding: 15px;
-        margin: 5px auto;
     }
 
-    .fue4 {
+    .fue {
         font-size: 18px;
-        padding: 6px 10px;
+        padding: 10px 15px;
     }
 
     table th, table td {
-        font-size: 20px;
-        padding: 8px;
+        font-size: 14px;
+        padding: 10px;
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
+
+@media (max-width: 480px) {
+    .mr_container2 {
+      padding: 10px;
+    }
+  
+    .fue {
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+  
+    .table-responsive {
+      overflow-x: auto;
+    }
+  
+    .riesgos-table th,
+    .riesgos-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  }

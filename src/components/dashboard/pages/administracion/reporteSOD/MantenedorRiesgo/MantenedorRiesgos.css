@@ -1,14 +1,12 @@
 /* Contenedor principal */
-.mr_container2 {
-  position: relative;
-  top: 30px;
+.mr_container {
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 1200px;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 /* Título principal */
@@ -17,6 +15,7 @@
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 /* Estilo de la tabla */
@@ -24,15 +23,18 @@
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
   overflow: hidden;
+}
+
+.riesgos-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
 }
 
 .riesgos-table th,
 .riesgos-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
+  padding: 12px 15px;
+  text-align: left;
 }
 
 /* Encabezado de la tabla */
@@ -105,29 +107,28 @@
 
 /* Pantallas pequeñas (teléfonos) */
 @media only screen and (max-width: 480px) {
-  .mr_container2 {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 15px;
-    position: relative;
-    margin: 0;
+
+  .riesgos-table-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    overflow-x: auto;
   }
 
   .riesgos-table {
-    display: block;
     width: 100%;
-    overflow-x: auto;
+    background-color: white;
   }
 
   .riesgos-table th,
   .riesgos-table td {
     font-size: 10px;
-    padding: 6px;
+    padding: 8px;
   }
 
   .mantenedor-riesgos-container h1 {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
   }
 
   .acciones-iconos {

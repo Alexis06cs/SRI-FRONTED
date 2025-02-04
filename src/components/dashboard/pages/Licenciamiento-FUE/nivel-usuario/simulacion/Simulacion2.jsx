@@ -33,7 +33,7 @@ const Simulacion2 = () => {
             <div className="simulacion-filtros">
                 {/* Primera sección: Usuarios */}
                 <div className="simulacion-seccion">
-                    <div className="input-group-simulacion">
+                    <div className="input-group-simulacion" >
                         <label htmlFor="usuarios">Usuarios:</label>
                         <input type="text" id="usuarios" />
                         <button className="buscar-btn">Buscar</button>

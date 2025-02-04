@@ -1,184 +1,119 @@
-/* Ajustes para el Navbar 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+.header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
-  height: 70px;
-}
-
-/* Ajustes del contenedor principal para que no se solape con el navbar 
-.main-content {
-  margin-top: 80px;
-  margin-left: 250px;
-  padding: 20px;
-  margin: 0;
-}
-
-/* Ajustes del logo 
-.navbar .logo img {
-  height: 50px;
-  margin-left: 20px;
-}
-
-/* Barra de búsqueda 
-.navbar .search-bar {
-  flex: 1;
+  height: var(--header__height, 60px); /* Se define un valor por defecto */
+  background-color: var(--color__white, #fff);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  z-index: 10;
   display: flex;
   justify-content: center;
-  position: relative; /* Importante para posicionar el ícono 
 }
 
-.navbar .search-bar input {
-  width: 40%;
-  padding: 8px 20px 8px 40px; /* Deja espacio para el ícono en el padding izquierdo 
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  background-color: #f4f4f4;
-  outline: none;
-}
-
-/* Pseudo-elemento para el ícono
-.navbar .search-bar::before {
-  content: url('/public/lupa.svg'); /* Reemplaza con la ruta correcta 
-  position: absolute;
-  left: 15px; /* Ajusta la posición del ícono 
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  pointer-events: none; /* Asegura que no interfiera con el input 
-}
-
-/* Información del usuario 
-.navbar .user-info {
-  display: flex;
-  align-items: center;
-}
-
-.navbar .user-info img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  margin-left: 10px;
-}
-  */
-
-
-/******************* HEADER *******************/
-.header{
-  position: fixed;
-  top: 0;
-  inset-inline: 0;
-  z-index: 5;
-  width: 100%;
-  width: 100vw;
-  height: var(--header__height);
-  background-color: var(--color__white);
-  box-shadow: 0px 1px 1px 0px #0008;
-
-  display: flex;
-
-  & .nav{
-    width: 90%;
-    width: 85%;
+/* 🔹 Navegación */
+.nav {
+  width: 85%;
     /* max-width: 1200px; */
-    margin-inline: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    & .nav__btn{
-      position: absolute;
-      left: 3%; /* Ajusta el posicionamiento del botón de la izquierda */
-      top: calc(50% - 1rem); /* Ajusta el posicionamiento del botón de arriba */
-      bottom: 0;
-      height: 2rem;
-      width: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    & .nav__btn__container{
-      width: 1.5rem;
-      aspect-ratio: 1/1;
-      height: 1.5rem;
-    }
-
-    & .nav__user__info{
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-
-      & .nav__user__info__text{
-        font-weight: 400;
-      }
-
-      & .nav__user__info__figure{
-        width: 2rem;
-        aspect-ratio: 1/1;
-        height: 2rem;
-      }
-    }
-
-    & .nav__cta{
-      width: 4rem;
-    }
-
-    & .nav__search__bar{
-      width: 30%;
-      max-width: 20rem;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      transition: all 0.3s ease;
-
-      &:has(.nav__search__bar__input:focus-within){
-        border-bottom: 1px solid #0ABD8C;
-      }
-
-      & .nav__search__bar__input{
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        padding: 0.5rem;
-        margin: 0;
-      }
-    }
-  }
-
 }
 
-@media screen and ( min-width: 20px) {
-
+/* 🔹 Botón de Menú */
+.nav__btn {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media only screen and (max-width: 480px) {
-/* .header{
-    display: block;
-    flex-direction: column-reverse;
-    padding: 12px;
-    font-size: 15px;
-    width: 357px;
-    float: none;
-    position: fixed;
-} */
+.nav__btn__container {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* 🔹 Información del Usuario */
+.nav__user__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .nav__user__info__text {
-  visibility: hidden;
+  font-weight: 400;
 }
 
-.body {
-    overflow: hidden;
+.nav__user__info__figure {
+  width: 2rem;
+  height: 2rem;
 }
 
+/* 🔹 Logo */
+.nav__cta {
+  width: 4rem;
+}
+
+/* 🔹 Barra de Búsqueda */
+.nav__search__bar {
+  width: 30%;
+  max-width: 20rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  transition: border-bottom 0.3s ease;
+}
+
+.nav__search__bar:focus-within {
+  border-bottom: 1px solid #0ABD8C;
+}
+
+.nav__search__bar__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+/* 🔹 Responsividad */
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 0 10px;
+  }
+
+  .nav__search__bar {
+    width: 50%;
+  }
+
+  .nav__user__info__text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__user__info {
+    display: none;
+  }
+
+  .nav__search__bar {
+    width: 80%;
+  }
+
+  .nav__btn {
+    left: 10px;
+  }
 }

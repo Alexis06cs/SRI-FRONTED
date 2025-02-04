@@ -7,21 +7,23 @@ const ObjetosCriticos = () => {
         <div className='oc_container_card'>
         <h1 className='titulo'> Despliegue de Objetos Críticos en usuarios</h1>
             <div className='oc_container_filters'>
-                <div>
+                <div className="filter-group">
                     <label htmlFor="fila">Fila: </label>
                     <select name="fila" id="fila">
                         <option value="">Select</option>
                     </select>
                 </div>
-                <div>
+                <div className="filter-group">
                     <label htmlFor="riesgo">Nivel Riesgo: </label>
                     <select name="riesgo" id="riesgo">
                         <option value="">Select</option>
                     </select>
                 </div>
+                <div className="button-group">
                 <button className='btn_buscar'>Buscar</button>
                 <button className='btn_histrograma'>Histograma</button>
                 <button className='btn_exportar_excel'>Exportar a Excel</button>
+                </div>
             </div>
             <div className='oc_container_table'>
                 <table>

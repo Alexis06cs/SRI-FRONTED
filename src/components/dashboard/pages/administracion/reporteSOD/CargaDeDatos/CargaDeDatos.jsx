@@ -15,7 +15,7 @@ const CargaDeDatos = () => {
 
   return (
     <div className="cdd_container">
-      <div className="carga-datos-container2">
+      <div className="carga-datos-container">
         <h1>Agregar riesgos desde excel</h1>
         
         {/* Formulario para cargar archivo */}
@@ -54,6 +54,7 @@ const CargaDeDatos = () => {
         {/* Tabla de Cargas Realizadas */}
         <div className='cd_table'>
             <h2 className="user">Cargas Realizadas</h2>
+            <div className="cargas-table-wrapper">
             <table className="cargas-table">
             <thead>
                 <tr>
@@ -85,6 +86,7 @@ const CargaDeDatos = () => {
                 ))}
             </tbody>
             </table>
+            </div>
         </div>
       </div>
     </div>

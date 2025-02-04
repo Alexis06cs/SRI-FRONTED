@@ -4,6 +4,7 @@ import { useAuth } from './AuthContext';
 import { Link } from 'react-router-dom'; 
 import './Login.css'; 
 import usuarios from './usuarios'; 
+
 const Login = () => {
   const navigate = useNavigate(); // Inicializar useNavigate para redirección
   const { login } = useAuth(); // Obtener la función login del contexto de autenticación

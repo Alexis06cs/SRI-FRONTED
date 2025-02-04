@@ -16,6 +16,7 @@ const MantenedorRuleset = () => {
   return (
     <div className="mr_container">
       <h1>Cargas Realizadas</h1>
+      <div className="mr_table-wrapper">
       <table className="mr_table">
         <thead>
           <tr>
@@ -49,6 +50,7 @@ const MantenedorRuleset = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

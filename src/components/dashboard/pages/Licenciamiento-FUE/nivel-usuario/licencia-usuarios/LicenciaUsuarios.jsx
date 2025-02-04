@@ -61,13 +61,16 @@ const LicenciaUsuarios = () => {
 
     return (
       <>
+        <div className="fue-container">
         <div className="fue">Total FUE: {Math.ceil(totalFUE)}</div>
-        <div className="mr_container">
+        </div>
+        <div className="mr_container2">
           <div className="mantenedor-riesgos-container">
             <h1>Vista General</h1>
             {loading && <p>Cargando datos...</p>}
             {error && <p>Error: {error}</p>}
             {!loading && !error && (
+            <div className="table-responsive">
               <table className="riesgos-table">
                 <thead>
                   <tr>
@@ -84,6 +87,7 @@ const LicenciaUsuarios = () => {
                   ))}
                 </tbody>
               </table>
+              </div>
             )}
           </div>
         </div>

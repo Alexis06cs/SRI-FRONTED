@@ -14,9 +14,10 @@ const MantenedorRiesgos = () => {
   ];
 
   return (
-    <div className="mr_container2">
+    <div className="mr_container">
       <div className="mantenedor-riesgos-container">
         <h1>Listado de Riesgos</h1>
+        <div className="riesgos-table-wrapper">
         <table className="riesgos-table">
           <thead>
             <tr>
@@ -46,6 +47,7 @@ const MantenedorRiesgos = () => {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );

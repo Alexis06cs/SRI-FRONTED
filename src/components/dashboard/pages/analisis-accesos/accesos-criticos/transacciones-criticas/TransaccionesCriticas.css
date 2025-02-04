@@ -1,21 +1,25 @@
 .tc_container {
-    padding: 1px;
-    background-color: rgb(247, 247, 247);
+    padding: 20px;
 }
 
 .tc_container_card {
-    margin: 20px;
-    padding: 20px;
+    margin: auto;
+    padding: 30px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    margin-top: 40px;
+    max-width: 1200px;
 }
 
+.card_filter {
+    display: flex;
+    flex-direction: column;
+  }
+
 .card_filters {
-    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espacio entre los filtros */
+    gap: 15px; /* Espacio entre los filtros */
 }
 
 .card_filters > div {
@@ -44,8 +48,9 @@
 .boton {
     color: #fff;
     font-size: 16px;
+    font-weight: 800;
     background-color: #0ABD8C;
-    padding: 10px 20px;
+    padding: 4px 4px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -56,20 +61,17 @@
 }
 
 .ventas_container {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .table_buttons {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
-<<<<<<< HEAD
-    justify-content: flex-end;
-=======
-    flex-wrap: wrap;
-    justify-content: space-between;
->>>>>>> e5151a32bfb2c9d1abb83dadbff3ff97bd06e035
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
+    justify-content: flex-end; /* Alinea los botones a la derecha */
 }
+
 
 
 .table_buttons button {
@@ -95,6 +97,23 @@
     overflow: hidden;
     margin-top: 20px;
 }
+
+.ventas_table th, .ventas_table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+
+
+
+.ventas_table td button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #0abd8c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 .ventas_table .table_header, .ventas_table .table_row {
     display: grid;
@@ -156,14 +175,11 @@
 
 .controls { 
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .controls_left {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
@@ -216,38 +232,69 @@
 
   /* Responsiveness */
 @media (max-width: 768px) {
-    .card_filters > div {
-        flex: 1 1 100%; /* Una columna por fila en pantallas pequeñas */
-    }
 
     .table_buttons {
-        flex-direction: column;
-        gap: 10px;
+        justify-content: center;
     }
 
     .controls {
-        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .controls_left,
     .controls_right {
-        flex-direction: column;
         gap: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .tc_container_card {
+        margin: 6px;
         padding: 10px;
-    }
-
-    .ventas_table .table_cell {
-        padding: 5px;
-        font-size: 14px;
     }
 
     .boton {
         font-size: 14px;
-        padding: 8px 16px;
+        padding: 1px 0px;
     }
+
+    .graficos_aqui {
+        margin-top: 20px;
+      }
+
+      .controls_right button {
+        padding: 3px 5px;
+    }
+
+    .controls_left button {
+        padding: 3px 5px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card_filter select {
+        width: 100%;
+      }
+
+    .ventas_table .table_cell {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .boton {
+        font-size: 14px;
+        padding: 1px 0px;
+    }
+
+    .titulo {
+        font-size: 20px;
+      }
+
+    .card_filters {
+        align-items: stretch;
+    }
+
+    .controls {
+        align-items: stretch;
+
+    }
+    
+
 }

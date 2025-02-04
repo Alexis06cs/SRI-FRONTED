@@ -12,26 +12,26 @@
   /* -------------------- Container N~1 ------------------*/
 
   .rp_container_zero_search_riesgos{
-    width: 557px;
-    height: 319px;
+    width: 700px;
+    height: auto;
     background: #FFF;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
     margin: 20px 0px 0px 20px;
-    padding: 7px 5px 15px 20px;
-    box-sizing: content-box;
+    padding: 32px;
     font-size: 15px;
     
   }
   .rp_container_zero_search_riesgos h4 {
     font-size: 22px;
     padding-left: 20px;
+    margin-bottom: 10px;
   }
   .rp_container_zero_search_riesgos_file_one {
     display: flex;
     gap: 10px;
   }
   .rp_container_zero_search_riesgos_file_one span {
-    padding: 20px;
+    padding: 22px;
   }
   .rp_container_zero_search_riesgos_file_one input {
     border-radius: 5px;
@@ -93,11 +93,17 @@
     margin: 0px;
   }
     /* 4ta Fila */
-  .rp_container_zero_search_criticidad{
+
+
+  .rp_container_zero_search_criticidad,
+  .rp_container_zero_search_tipos,
+  .rp_container_zero_search_simulacion {
     display: flex;
-    gap: 13px;
-    margin: 20px 0px 0px 20px;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
   }
+
   .rp_container_zero_search_criticidad span{
     font-size: 12px;
     margin-top: 3px;
@@ -113,13 +119,13 @@
     margin: 0px;
   }
 
-   /* 5ta Fila */
-
-  .rp_container_zero_search_tipos {
-    display: flex;
-    gap: 13px;
-    margin: 20px 0px 0px 20px;
+  .rp_container_zero_search_criticidad label,
+  .rp_container_zero_search_tipos label {
+    font-size: 14px;
+    margin-right: 5px;
   }
+
+   /* 5ta Fila */
   .rp_container_zero_search_tipos .rp_container_tipos{
     padding-right: 23px;
   }
@@ -130,11 +136,7 @@
     margin: 0px;
   }
   /*6ta Fila */
-  .rp_container_zero_search_simulacion{
-    display: flex;
-    gap: 17px;
-    margin: 25px 0px 20px 20px;
-  }
+
 
   .rp_container_zero_search_simulacion .rp_container_simulacion{
     padding-right: 65px;
@@ -160,12 +162,11 @@
   .rp_container_zero_card2_simulacion, 
   .rp_container_zero_card2_grafico {
     /* width: 420px; */
-    height: 160px;
+    height: 180px;
     flex-shrink: 0;
     background: #FFF;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
     padding: 20px 10px 20px 15px;
-    
   }
   
   .rp_container_zero_card2_simulacion h4{
@@ -246,8 +247,7 @@
   input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    border-radius: 4px;
-    border: 1px solid #000;
+    cursor: pointer;
   }
   
   input[type="checkbox"]:checked {
@@ -259,13 +259,11 @@
 /* CAR PARA CONTAINER ONE */
 
   .rp_container_one {
-    width: auto; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    height: auto; /* Ajusta la altura automáticamente */
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
-    box-sizing: border-box; /* Incluye el padding en el ancho y altura */
     margin: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .rp_container_one_main h3{
@@ -364,16 +362,15 @@
 
 
  .rp_container_two {
-
-    width: auto; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    height: 700px; /* Ajusta la altura automáticamente */
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box; /* Incluye el padding en el ancho y altura */
-    margin: 20px;
-    overflow-y: auto; /* Habilita el scroll vertical */
-    overflow-x: hidden; /* Evita el scroll horizontal */
+  width: auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 500px;
   }
 
 .rp_container_two th,
@@ -422,6 +419,7 @@
   
   .rp_container_graphic {
     position: relative;
+    overflow: hidden;
   }
   
   .loader-overlay {
@@ -438,7 +436,8 @@
   
   .fade-in-content {
     opacity: 0;
-    animation: fadeIn 0.8s forwards;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
   
   @keyframes fadeIn {
@@ -496,8 +495,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 24px;
+  width: 40px;
+  height: 22px;
 }
 
 /* Oculta el checkbox */
@@ -511,21 +510,20 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
-  border-radius: 24px;
+  border-radius: 22px;
+  width: 100%;
+  height: 100%;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
-  left: 4px;
+  height: 18px;
+  width: 18px;
+  left: 2px;
   bottom: 2px;
   background-color: white;
   transition: 0.4s;
@@ -538,141 +536,153 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(18px);
 }
 
-<<<<<<< HEAD
-=======
+
 /* Dispositivos pequeños (smartphones) */
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 768px) {
   .rp_container_zero {
-    grid-template-columns: 1fr; /* Todo en una columna */
+      flex-direction: column;
   }
 
-  .grid {
-    grid-template-columns: 1fr; /* Una sola columna */
-  }
-
-  .rp_container_zero {
-    display: grid;
-    grid-template-columns: 1fr; /* Por defecto, una sola columna */
-    gap: 5px;
-  }
-
-  .rp_container_zero_card_2 {
-    grid-template-rows: auto; /* Asegura que las tarjetas se ajusten dinámicamente */
-  }
-
-  .rp_container_two table {
-    width: 190%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
-    border-collapse: collapse; /* Combina bordes */
-  }
-  
-   .rp_container_two {
-    width: 110%; /* Ocupa todo el ancho disponible */
-    height: 500px; /* Ajusta la altura automáticamente */
+  .rp_container_zero_search_riesgos {
+    width: 95%;
     padding: 20px;
-    box-sizing: border-box; /* Incluye el padding en el ancho y altura */
-    margin: 5px;
-    overflow-x: auto; /* Habilita el scroll horizontal */
-  }
-  
-  .rp_container_two th,
-  .rp_container_two td {
-    text-align: left;
-    padding: 12px;
-    border: 1px solid #ddd; /* Bordes ligeros */
-  }
+}
 
-  .rp_container_zero_card2_simulacion_file1 input {
-    margin-left: 10px;
-    width: 180px;
-    height: 10px;
-  }
-  .rp_container_zero_card2_simulacion_file2 input {
-    margin-left: 10px;
-    width: 100px;
-    height: 10px;
+  .rp_container_zero_search_riesgos_file_one input {
+      width: 55%;
   }
 
   .rp_container_zero_card2_simulacion {
-    /* width: 420px; */
+    width: 665px;
     height: 180px;
-    width: 98%;
+    padding: 15px 10px 20px 15px;
+    margin: 15px;
   }
- 
+
+  .btn_rp_buscar {
+      width: 100%;
+      margin-top: 5px;
+  }
+
+  .rp_container_graphic {
+      text-align: center;
+  }
+
+  .rp_container_two {
+      height: auto;
+      overflow-y: hidden;
+  }
+
   .rp_container_zero_card2_grafico {
-    /* width: 420px; */
-    height: 350px;
-    width: 96%;
-    padding: 20px;
-    margin: 5px;
-    
+    width: 665px;
+    height: 150px;
+    padding: 15px 10px 20px 15px;
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .rp_container_zero_search_riesgos {
+      width: 95%;
+      padding: 10px;
   }
 
-  .rp_container_zero_search_riesgos{
-    width: 88%;
-    height: 255px;    
-  }
-
-  .rp_container_zero_search_riesgos{
-    width: 380px;
-    height: 270px;
-    margin: 10px;
-    padding: 10px;
-    box-sizing: content-box;
-    font-size: 15px;
-  }
-
-  .rp_container_zero_card2_grafico span{
-    font-size: 15px;
-  }
-
-  .rp_container_zero_card2_grafico h4 {
-    margin-bottom: 15px;
-  }
-
-  input[type="checkbox"] {
-    width: 40px;
-    height: 25px;
+  .rp_container_zero_search_riesgos_file_one {
+      flex-direction: inherit;
+      gap: 1px;
   }
 
   .rp_container_zero_search_riesgos_file_one input {
-    border-radius: 2px;
-    width: 140px;
-
+      width: 40%;
   }
 
-  .rp_container_zero_search_riesgos_file_one .btn_rp_buscar {
-    width: 75px;
+
+  .rp_container_zero_search_criticidad,
+  .rp_container_zero_search_tipos {
+      align-items: flex-start;
   }
 
-  .rp_container_zero_card_2 {
-    width: 100%; /* Se ajusta para ocupar un ancho relativo del 48% del contenedor */
+  .rp_container_graphic {
+      text-align: center;
   }
 
+  .rp_container_zero_card2_simulacion {
+    width: 450px;
+    height: 180px;
+    padding: 15px 10px 20px 15px;
+    margin: 15px;
+  }
+  .rp_container_zero_card2_simulacion_file1 input {
+    margin-left: 9px;
+    width: 150px;
+    height: 25px;
+  }
+  .rp_container_zero_card2_simulacion_file2 input {
+    margin-left: 9px;
+    width: 150px;
+    height: 25px;
+  }
+
+  .rp_container_zero_card2_grafico {
+    width: 450px;
+    height: 150px;
+    padding: 15px 10px 20px 15px;
+    margin: 15px;
+  }
+
+  .rp_container_one {
+    padding: 15px 10px 20px 15px;
+    margin: 10px;
+  }
+
+  .rp_container_two {
+    width: 96%;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 20px 1px 2px 1px;
+    margin: 10px;
+    height: auto; 
 }
 
-/* Tablets (pantallas medianas) */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-  .rp_container_zero {
-    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas medianas */
-    gap: 20px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas para gráficos */
-  }
+.rp_container_two table {
+    font-size: 12px;
+    width: 100%;
+    border-collapse: collapse; /* Combina los bordes */
+    padding: 40px;
+    margin: -40px;
 }
 
-/* Desktops (pantallas grandes) */
-@media screen and (min-width: 1025px) {
-  .rp_container_zero {
-    grid-template-columns: 2fr 1fr; /* Mayor proporción para la búsqueda */
-  }
-
-  .grid {
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas para gráficos */
-  }
+.rp_container_two th,
+.rp_container_two td {
+    text-align: center; /* Alineación centrada */
+    white-space: nowrap; /* Evita que el texto se divida */
+    font-size: 12px; /* Tamaño de fuente más pequeño */
 }
->>>>>>> 0d69c18c83112fa00437f0afc4ba978ecd25492c
+
+/* Permitir scroll horizontal en tablas si el contenido es muy ancho */
+.rp_container_two::-webkit-scrollbar {
+    height: 8px; /* Altura del scrollbar */
+}
+
+.rp_container_two::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.rp_container_two::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Ajuste para botones dentro de la tabla */
+.rp_container_two button {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+}

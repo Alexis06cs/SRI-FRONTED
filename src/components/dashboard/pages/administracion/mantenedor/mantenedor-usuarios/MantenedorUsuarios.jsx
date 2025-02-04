@@ -29,15 +29,15 @@ const MantenedorUsuarios = () => {
   };
 
   return (
-    <div className="mu_container3">
-      <div className="usuarios-container3">
-        <h1>Listado de usuarios</h1>
-
+    <div className="mu_container">
+      <div className="usuarios-container">
         {/* Botón para agregar un usuario */}
         <div className="usuarios-header">
+          <h1>Listado de usuarios</h1>
           <button className="btn-agregar">+ Agregar Usuario</button>
         </div>
-
+        
+        <div className="usuarios-table-wrapper">
         <table className="usuarios-table">
           <thead>
             <tr>
@@ -72,6 +72,7 @@ const MantenedorUsuarios = () => {
             ))}
           </tbody>
         </table>
+        </div>
 
         {modalEditarVisible && usuarioSeleccionado && (
           <div className="modal-overlay">
@@ -142,7 +143,7 @@ const MantenedorUsuarios = () => {
 
                 <div className="form-buttons-right">
                   <button type="button" className="btn-eliminar">Eliminar</button>
-                  <button type="button" className="btn-cancelar2" onClick={hideModalEditar}>Cancelar</button>
+                  <button type="button" className="btn-cancelar" onClick={hideModalEditar}>Cancelar</button>
                   <button type="submit" className="btn-guardar">Guardar</button>
                 </div>
               </form>

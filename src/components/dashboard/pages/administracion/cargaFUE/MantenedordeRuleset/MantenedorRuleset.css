@@ -7,7 +7,8 @@
   border-radius: 10px;
   width: 100%;
   max-width: 1200px;
-  margin: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Título principal */
@@ -16,6 +17,11 @@
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
+}
+
+.mr_table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
 }
 
 /* Estilo de la tabla */
@@ -92,16 +98,24 @@
 
 /* Ajuste para pantallas muy pequeñas (teléfonos) */
 @media screen and (max-width: 480px) {
+
+  .mr_table-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    overflow-x: auto;
+  }
+
   .mr_table {
       display: block;
       width: 100%;
-      overflow-x: auto;
   }
 
   .mr_table th,
   .mr_table td {
       font-size: 10px;
       padding: 8px;
+      
   }
 
   .mr_container h1 {
